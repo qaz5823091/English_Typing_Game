@@ -4,9 +4,10 @@
 #include <QMainWindow>
 #include <QLabel>
 #include <QKeyEvent>
+#include <QTimer>
 #include <vector>
 #include "Word.h"
-#include "Timer.h"
+//#include "Timer.h"
 #include "RecordrRank.h"
 
 QT_BEGIN_NAMESPACE
@@ -17,28 +18,39 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-private:
-    Ui::MainWindow *ui;
+    private:
+        Ui::MainWindow *ui;
 
-    Timer timer;
-    QString question;
-    QString reply;
-    std::vector<Word> word;
-    int length;
-    static int index;
+        QTimer *timer;
+        QString question;
+        QString reply;
+        std::vector<Word> word;
+        int length;
+        int seconds;
+        // int gameStatus;
+        static int index;
 
-    RecordRank *rank;
+        RecordRank *rank;
 
-public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    public slots:
+        void slot();
 
-    void keyPressEvent(QKeyEvent *);
-    void readFile(QString );
-    void setWord();
-    void setLabelQuestion(QString );
-    void setLabelReply(QString );
-    void setLabelSeconds(QString );
+    public:
+        MainWindow(QWidget *parent = nullptr);
+        ~MainWindow();
+
+        void keyPressEvent(QKeyEvent *);
+        void readFile(QString );
+        void setWord();
+        void setLabelQuestion(QString );
+        void setLabelReply(QString );
+        void setLabelSeconds(QString );
+        void setLabelHint(QString );
+        void setLCDCounter(int );
+
+        void gameStart();
+        void gameStop();
+        void judge();
 
 };
 #endif // MAINWINDOW_H

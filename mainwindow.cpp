@@ -16,14 +16,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QFont font;
-    font.setPointSize(20);
-    ui->question->setFont(font);
-    ui->input->setFont(font);
-    setWord();
-    setLabelQuestion(word[index].getWord());
-    timer.toLabel(ui->seconds);
-    timer.start();
+
+    gameStart();
 }
 
 MainWindow::~MainWindow()
@@ -32,41 +26,33 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event) {
+    setLabelHint("");
+
     QString key;
-    key = char(event->key());
-    if (index < length) {
-        if (word[index].getSolved() == false) {
-            if (key == Qt::Key_Space) {
-                if (reply == word[index].getWord()) {
-                    setLabelReply("Correct!");
-                    index++;
-                    if (index < length) {
-                        setLabelQuestion(word[index].getWord());
-                    }
-                    else {
-                        setLabelQuestion("Finish!");
-                        timer.stop();
-                        rank = new RecordRank();
-                        rank->sendGrade(length, timer.counter);
-                        rank->show();
-                    }
-                }
-                else {
-                    setLabelReply("Fail . .");
-                }
-                reply = "";
-            }
-            else if (key == Qt::Key_Backspace) {
-                reply.chop(1);
-                setLabelReply(reply);
-            }
-            else {
+    switch(event->key()) {
+        case Qt::Key_Return:
+        case Qt::Key_Enter:
+            judge();
+            break;
+        case Qt::Key_Backspace:
+            reply.chop(1);
+            break;
+        default:
+            key = char(event->key());
+            if (key > 'Z' || key < 'A')
+                break;
+
+            // combine shift and another key
+            if ( event->modifiers().testFlag(Qt::ShiftModifier) )
+                key = key.toUpper();
+            else
                 key = key.toLower();
-                reply += key;
-                setLabelReply(reply);
-            }
-        }
+
+            reply += key;
+
+            break;
     }
+    setLabelReply(reply);
 }
 
 
@@ -86,7 +72,6 @@ void MainWindow::readFile(QString fileName) {
 }
 
 void MainWindow::setWord() {
-    //readFile("C:\\Users\\allen\\OneDrive\\Desktop\\others\\EnglishTypingGame\\vocabulary.txt");
     QString location = ":/txt/vocabulary.txt";
     readFile(location);
     length = word.size();
@@ -98,4 +83,60 @@ void MainWindow::setLabelQuestion(QString question) {
 
 void MainWindow::setLabelReply(QString reply) {
     ui->input->setText(reply);
+}
+
+void MainWindow::setLabelHint(QString hint) {
+    ui->hint->setText(hint);
+}
+
+void MainWindow::setLCDCounter(int second) {
+    ui->downCounter->display(second);
+}
+
+void MainWindow::gameStart() {
+
+    timer = new QTimer();
+    seconds = 30;
+    connect(timer, SIGNAL(timeout()), this, SLOT(slot()));
+
+    setWord();
+    setLabelQuestion(word[index].getWord());
+    setLCDCounter(seconds);
+
+    timer->start(1000);
+}
+
+void MainWindow::gameStop() {
+    timer->stop();
+
+    setLabelQuestion("Time is up!");
+}
+
+void MainWindow::judge() {
+    if (reply == word[index].getWord()) {
+        setLabelHint("Correct!");
+        ++index;
+        if (index < length) {
+            setLabelQuestion(word[index].getWord());
+        }
+        else {
+            gameStop();
+            setLabelQuestion("Finish!");
+        }
+    }
+    else {
+        setLabelHint("Fail");
+    }
+
+    reply = "";
+}
+
+void MainWindow::slot() {
+    --seconds;
+
+    if (seconds == 0) {
+        gameStop();
+    }
+
+    setLCDCounter(seconds);
 }
