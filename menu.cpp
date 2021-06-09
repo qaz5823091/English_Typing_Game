@@ -1,5 +1,6 @@
 #include "menu.h"
 #include "ui_menu.h"
+#include <QStackedWidget>
 
 Menu::Menu(QWidget *parent) :
     QMainWindow(parent),
@@ -15,12 +16,17 @@ Menu::~Menu()
 
 void Menu::on_pushButton_clicked()
 {
-    mainWindow = new MainWindow();
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void Menu::on_buttonEasy_clicked()
+{
+    mainWindow = new MainWindow(nullptr, ":/txt/vocabulary.txt");
     mainWindow->show();
 }
 
-void Menu::on_pushButton_3_clicked()
+void Menu::on_buttonToeic_clicked()
 {
-    custom = new Custom();
-    custom->show();
+    mainWindow = new MainWindow(nullptr, ":/txt/Toeic.txt");
+    mainWindow->show();
 }

@@ -36,19 +36,21 @@ class MainWindow : public QMainWindow
         void slot();
 
     public:
-        MainWindow(QWidget *parent = nullptr);
+        MainWindow(QWidget *parent = nullptr, QString loc = ":/txt/vocabulary.txt");
         ~MainWindow();
 
         void keyPressEvent(QKeyEvent *);
         void readFile(QString );
-        void setWord();
+        //void setWord();
+        void setWord(QString);
         void setLabelQuestion(QString );
         void setLabelReply(QString );
         void setLabelSeconds(QString );
         void setLabelHint(QString );
         void setLCDCounter(int );
 
-        void gameStart();
+        //void gameStart();
+        void gameStart(QString);
         void gameStop();
         void judge();
 

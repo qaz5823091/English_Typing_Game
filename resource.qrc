@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/txt">
         <file>vocabulary.txt</file>
+        <file>Toeic.txt</file>
     </qresource>
 </RCC>

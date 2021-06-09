@@ -6,70 +6,94 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>743</width>
-    <height>498</height>
+    <width>654</width>
+    <height>522</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>130</y>
-      <width>211</width>
-      <height>41</height>
+      <x>0</x>
+      <y>0</y>
+      <width>651</width>
+      <height>501</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>微軟正黑體</family>
-      <pointsize>12</pointsize>
-     </font>
+    <property name="currentIndex">
+     <number>0</number>
     </property>
-    <property name="text">
-     <string>New Game</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>200</y>
-      <width>211</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微軟正黑體</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Rank</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>270</y>
-      <width>211</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微軟正黑體</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Load Your Own Text</string>
-    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>260</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Rank</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>160</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>New Game</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QPushButton" name="buttonEasy">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>150</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>初級</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonToeic">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>280</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Toeic</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -77,8 +101,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>743</width>
-     <height>25</height>
+     <width>654</width>
+     <height>20</height>
     </rect>
    </property>
   </widget>

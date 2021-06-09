@@ -11,13 +11,13 @@
 
 int MainWindow::index = 0;
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(QWidget *parent, QString location)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
-    gameStart();
+    gameStart(location);
 }
 
 MainWindow::~MainWindow()
@@ -71,8 +71,8 @@ void MainWindow::readFile(QString fileName) {
     file.close();
 }
 
-void MainWindow::setWord() {
-    QString location = ":/txt/vocabulary.txt";
+void MainWindow::setWord(QString location) {
+    //QString location = ":/txt/vocabulary.txt";
     readFile(location);
     length = word.size();
 }
@@ -93,13 +93,13 @@ void MainWindow::setLCDCounter(int second) {
     ui->downCounter->display(second);
 }
 
-void MainWindow::gameStart() {
+void MainWindow::gameStart(QString loc) {
 
     timer = new QTimer();
     seconds = 30;
     connect(timer, SIGNAL(timeout()), this, SLOT(slot()));
 
-    setWord();
+    setWord(loc);
     setLabelQuestion(word[index].getWord());
     setLCDCounter(seconds);
 

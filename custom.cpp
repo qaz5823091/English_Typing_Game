@@ -12,3 +12,10 @@ Custom::~Custom()
 {
     delete ui;
 }
+
+void Custom::on_pushButton_clicked()
+{
+   QString loc = ":/txt/Toeic.txt";
+
+    emit sendCustom(loc);
+}

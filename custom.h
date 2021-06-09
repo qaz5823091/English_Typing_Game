@@ -15,6 +15,13 @@ public:
     explicit Custom(QWidget *parent = nullptr);
     ~Custom();
 
+signals:
+    void sendCustom(QString location);
+
+private slots:
+
+    void on_pushButton_clicked();
+
 private:
     Ui::Custom *ui;
 };

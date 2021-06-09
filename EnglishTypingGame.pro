@@ -15,7 +15,6 @@ SOURCES += \
     RecordRank.cpp \
     Timer.cpp \
     Word.cpp \
-    custom.cpp \
     main.cpp \
     mainwindow.cpp \
     menu.cpp
@@ -31,13 +30,11 @@ HEADERS += \
     RecordrRank.h \
     Timer.h \
     Word.h \
-    custom.h \
     mainwindow.h \
     menu.h
 
 FORMS += \
     RecordRank.ui \
-    custom.ui \
     mainwindow.ui \
     menu.ui
 
