@@ -100,7 +100,7 @@ void MainWindow::gameStart(QString loc) {
     connect(timer, SIGNAL(timeout()), this, SLOT(slot()));
 
     setWord(loc);
-    setLabelQuestion(word[index].getWord());
+    setLabelQuestion("Question :   "+word[index].getWord());
     setLCDCounter(seconds);
 
     timer->start(1000);
@@ -121,6 +121,9 @@ void MainWindow::judge() {
         }
         else {
             gameStop();
+            rank = new RecordRank();
+            rank->sendGrade(length, seconds);
+            rank->show();
             setLabelQuestion("Finish!");
         }
     }

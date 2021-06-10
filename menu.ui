@@ -46,7 +46,7 @@
        <string>Rank</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="buttonNewGame">
       <property name="geometry">
        <rect>
         <x>210</x>

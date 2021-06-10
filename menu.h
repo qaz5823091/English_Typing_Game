@@ -18,11 +18,12 @@ public:
     ~Menu();
 
 private slots:
-    void on_pushButton_clicked();
 
     void on_buttonEasy_clicked();
 
     void on_buttonToeic_clicked();
+
+    void on_buttonNewGame_clicked();
 
 private:
     Ui::Menu *ui;

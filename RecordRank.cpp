@@ -17,8 +17,8 @@ RecordRank::~RecordRank()
 }
 
 void RecordRank::setPlayer() {
-    player->setFirstName( ui->firstNameEdit->toPlainText() );
-    player->setLastName( ui->lastNameEdit->toPlainText() );
+    player->setFirstName( ui->firstNameEdit->text() );
+    player->setLastName( ui->lastNameEdit->text() );
     player->setScore(100);
     player->setRanking(0);
 }

@@ -14,7 +14,7 @@ Menu::~Menu()
     delete ui;
 }
 
-void Menu::on_pushButton_clicked()
+void Menu::on_buttonNewGame_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
 }
