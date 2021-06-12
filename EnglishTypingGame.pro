@@ -49,3 +49,5 @@ DISTFILES += \
 
 RESOURCES += \
     resource.qrc
+
+RC_ICONS = EnglishDict_icon.ico

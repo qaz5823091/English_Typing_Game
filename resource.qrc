@@ -3,4 +3,7 @@
         <file>vocabulary.txt</file>
         <file>Toeic.txt</file>
     </qresource>
+    <qresource prefix="/icon">
+        <file>EnglishDict_icon.ico</file>
+    </qresource>
 </RCC>
