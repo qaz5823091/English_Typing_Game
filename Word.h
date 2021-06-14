@@ -2,7 +2,6 @@
 #define WORD_H
 
 #include "Question.h"
-#include <iostream>
 #include <QString>
 
 class Word: public Question {

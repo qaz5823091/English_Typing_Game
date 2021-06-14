@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QStackedWidget>
+#include <QCloseEvent>
 #include "mainwindow.h"
 
 namespace Ui {
@@ -17,6 +18,10 @@ public:
     explicit Menu(QWidget *parent = nullptr);
     ~Menu();
 
+    void keyPressEvent(QKeyEvent *event);
+
+    void closeEvent(QCloseEvent *event);
+
 private slots:
 
     void on_buttonEasy_clicked();
@@ -24,6 +29,8 @@ private slots:
     void on_buttonToeic_clicked();
 
     void on_buttonNewGame_clicked();
+
+    void on_buttonRank_clicked();
 
 private:
     Ui::Menu *ui;

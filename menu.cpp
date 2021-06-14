@@ -1,6 +1,8 @@
 #include "menu.h"
 #include "ui_menu.h"
 #include <QStackedWidget>
+#include <QMessageBox>
+#include <QDebug>
 
 Menu::Menu(QWidget *parent) :
     QMainWindow(parent),
@@ -31,4 +33,37 @@ void Menu::on_buttonToeic_clicked()
     mainWindow = new MainWindow(nullptr, ":/txt/Toeic.txt");
     mainWindow->setFixedSize(mainWindow->width(), mainWindow->height());
     mainWindow->show();
+}
+
+
+void Menu::keyPressEvent(QKeyEvent *event) {
+    char key;
+    key = char(event->key());
+    switch(key) {
+        case 'A':
+            ui->stackedWidget->setCurrentIndex(0);
+            break;
+        case 'D':
+            ui->stackedWidget->setCurrentIndex(1);
+            break;
+        default:
+            break;
+    }
+}
+
+void Menu::closeEvent(QCloseEvent *event) {
+    QMessageBox::StandardButton resBtn = QMessageBox::question( this, "EnglishTypingGame",
+                                                                    tr("Are you sure to exit?\n"),
+                                                                    QMessageBox::No | QMessageBox::Yes,
+                                                                    QMessageBox::Yes);
+    if (resBtn != QMessageBox::Yes)
+        event->ignore();
+    else
+        event->accept();
+}
+
+void Menu::on_buttonRank_clicked()
+{
+    // unfinished
+    return ;
 }

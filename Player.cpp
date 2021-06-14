@@ -10,12 +10,6 @@ void Player::setName(QString n) {
     return ;
 }
 
-void Player::setScore(int s) {
-    this->score = s;
-
-    return ;
-}
-
 void Player::setWPM(double w) {
     this->WPM = w;
 
@@ -30,10 +24,6 @@ void Player::setRanking(int r) {
 
 QString Player::getName() {
     return name;
-}
-
-int Player::getScore() {
-    return score;
 }
 
 double Player::getWPM() {

@@ -31,7 +31,7 @@
      <number>0</number>
     </property>
     <widget class="QWidget" name="page">
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="buttonRank">
       <property name="geometry">
        <rect>
         <x>210</x>
@@ -118,7 +118,7 @@
      <x>0</x>
      <y>0</y>
      <width>654</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

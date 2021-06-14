@@ -16,7 +16,6 @@ public:
     explicit RecordRank(QWidget *parent = nullptr);
     ~RecordRank();
 
-    void setPlayer();
     void sendGrade(int number, int seconds);
 
 private slots:

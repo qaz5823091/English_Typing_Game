@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "Timer.h"
 
 #include <QKeyEvent>
 #include <QFile>
@@ -108,7 +107,6 @@ void MainWindow::gameStart(QString loc) {
 
 void MainWindow::gameStop() {
     timer->stop();
-
     setLabelQuestion("Time is up!");
 }
 

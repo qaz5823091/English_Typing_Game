@@ -109,9 +109,15 @@
        <rect>
         <x>20</x>
         <y>60</y>
-        <width>151</width>
+        <width>191</width>
         <height>91</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Agency FB</family>
+        <pointsize>9</pointsize>
+       </font>
       </property>
      </widget>
      <widget class="QLabel" name="input">
@@ -170,7 +176,7 @@
      <x>0</x>
      <y>0</y>
      <width>780</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

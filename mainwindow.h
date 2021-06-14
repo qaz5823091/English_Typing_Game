@@ -7,7 +7,6 @@
 #include <QTimer>
 #include <vector>
 #include "Word.h"
-//#include "Timer.h"
 #include "RecordrRank.h"
 
 QT_BEGIN_NAMESPACE
