@@ -4,14 +4,8 @@ Player::Player() {
 
 }
 
-void Player::setFirstName(QString f) {
-    this->firstName = f;
-
-    return ;
-}
-
-void Player::setLastName(QString l) {
-    this->lastName = l;
+void Player::setName(QString n) {
+    this->name = n;
 
     return ;
 }
@@ -34,12 +28,8 @@ void Player::setRanking(int r) {
     return ;
 }
 
-QString Player::getFirstName() {
-    return firstName;
-}
-
-QString Player::getLastName() {
-    return lastName;
+QString Player::getName() {
+    return name;
 }
 
 int Player::getScore() {

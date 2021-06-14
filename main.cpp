@@ -10,6 +10,8 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     Menu m;
+    // fixed size window
+    m.setFixedSize(m.width(), m.height());
     m.show();
     //MainWindow w;
     //w.show();

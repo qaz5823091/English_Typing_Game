@@ -123,6 +123,7 @@ void MainWindow::judge() {
             gameStop();
             rank = new RecordRank();
             rank->sendGrade(length, seconds);
+            rank->setFixedSize(rank->width(), rank->height());
             rank->show();
             setLabelQuestion("Finish!");
         }

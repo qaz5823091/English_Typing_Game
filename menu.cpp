@@ -22,11 +22,13 @@ void Menu::on_buttonNewGame_clicked()
 void Menu::on_buttonEasy_clicked()
 {
     mainWindow = new MainWindow(nullptr, ":/txt/vocabulary.txt");
+    mainWindow->setFixedSize(mainWindow->width(), mainWindow->height());
     mainWindow->show();
 }
 
 void Menu::on_buttonToeic_clicked()
 {
     mainWindow = new MainWindow(nullptr, ":/txt/Toeic.txt");
+    mainWindow->setFixedSize(mainWindow->width(), mainWindow->height());
     mainWindow->show();
 }

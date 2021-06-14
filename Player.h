@@ -6,8 +6,7 @@
 
 class Player {
     private:
-        QString firstName;
-        QString lastName;
+        QString name;
         int score;
         double WPM;
         int ranking;
@@ -15,21 +14,15 @@ class Player {
     public:
         Player();
 
-        void setFirstName(QString );
-        void setLastName(QString );
+        void setName(QString );
         void setScore(int );
         void setWPM(double );
         void setRanking(int );
 
-        QString getFirstName();
-        QString getLastName();
+        QString getName();
         int getScore();
         double getWPM();
         int getRanking();
 };
 
 #endif // PLAYER_H
-
-// game
-// ranking
-// exit

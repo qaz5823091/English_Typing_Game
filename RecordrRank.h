@@ -19,6 +19,11 @@ public:
     void setPlayer();
     void sendGrade(int number, int seconds);
 
+private slots:
+    void on_check_accepted();
+
+    void on_check_rejected();
+
 private:
     Ui::RecordRank *ui;
     Player *player;

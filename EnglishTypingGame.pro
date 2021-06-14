@@ -15,9 +15,14 @@ SOURCES += \
     RecordRank.cpp \
     Timer.cpp \
     Word.cpp \
+    custom.cpp \
+    form.cpp \
     main.cpp \
     mainwindow.cpp \
-    menu.cpp
+    menu.cpp \
+    newgame.cpp \
+    rank.cpp \
+    whichgame.cpp
 
 HEADERS += \
     ../NCYU_Class/EnglishTypingGame/Article.h \
@@ -30,13 +35,23 @@ HEADERS += \
     RecordrRank.h \
     Timer.h \
     Word.h \
+    custom.h \
+    form.h \
     mainwindow.h \
-    menu.h
+    menu.h \
+    newgame.h \
+    rank.h \
+    whichgame.h
 
 FORMS += \
     RecordRank.ui \
+    custom.ui \
+    form.ui \
     mainwindow.ui \
-    menu.ui
+    menu.ui \
+    newgame.ui \
+    rank.ui \
+    whichgame.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -44,6 +59,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    Toeic.txt \
     temp.txt \
     vocabulary.txt
 

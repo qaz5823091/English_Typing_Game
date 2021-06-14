@@ -17,14 +17,13 @@ RecordRank::~RecordRank()
 }
 
 void RecordRank::setPlayer() {
-    player->setFirstName( ui->firstNameEdit->text() );
-    player->setLastName( ui->lastNameEdit->text() );
+    player->setName( ui->nameEdit->text() );
     player->setScore(100);
     player->setRanking(0);
 }
 
 void RecordRank::sendGrade(int number, int seconds) {
     player->setWPM( double(number  / (seconds / 60.0)) );
-    qDebug() << number << " " << seconds << " " << player->getWPM() ;
+    // qDebug() << number << " " << seconds << " " << player->getWPM() ;
     ui->wpmLabel->setText("速度：    " + QString::number(player->getWPM()) + "    字 / 分鐘");
 }
