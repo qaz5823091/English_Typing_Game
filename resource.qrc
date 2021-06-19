@@ -2,6 +2,7 @@
     <qresource prefix="/txt">
         <file>vocabulary.txt</file>
         <file>Toeic.txt</file>
+        <file>rankList.txt</file>
     </qresource>
     <qresource prefix="/icon">
         <file>EnglishDict_icon.ico</file>

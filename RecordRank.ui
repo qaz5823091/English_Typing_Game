@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>End</string>
   </property>
   <widget class="QDialogButtonBox" name="check">
    <property name="geometry">
@@ -87,6 +87,9 @@
      <family>Agency FB</family>
      <pointsize>20</pointsize>
     </font>
+   </property>
+   <property name="placeholderText">
+    <string>請輸入名字</string>
    </property>
   </widget>
  </widget>

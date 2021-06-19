@@ -31,25 +31,6 @@
      <number>0</number>
     </property>
     <widget class="QWidget" name="page">
-     <widget class="QPushButton" name="buttonRank">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>260</y>
-        <width>211</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>微軟正黑體</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Rank</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="buttonNewGame">
       <property name="geometry">
        <rect>
@@ -67,6 +48,25 @@
       </property>
       <property name="text">
        <string>New Game</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonRank">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>270</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Rank</string>
       </property>
      </widget>
     </widget>
@@ -106,7 +106,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Toeic</string>
+       <string>多益</string>
       </property>
      </widget>
     </widget>

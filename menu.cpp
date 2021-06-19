@@ -1,5 +1,6 @@
 #include "menu.h"
 #include "ui_menu.h"
+#include "ranklist.h"
 #include <QStackedWidget>
 #include <QMessageBox>
 #include <QDebug>
@@ -26,6 +27,8 @@ void Menu::on_buttonEasy_clicked()
     mainWindow = new MainWindow(nullptr, ":/txt/vocabulary.txt");
     mainWindow->setFixedSize(mainWindow->width(), mainWindow->height());
     mainWindow->show();
+    ui->stackedWidget->setCurrentIndex(0);
+    //this->close();
 }
 
 void Menu::on_buttonToeic_clicked()
@@ -33,6 +36,8 @@ void Menu::on_buttonToeic_clicked()
     mainWindow = new MainWindow(nullptr, ":/txt/Toeic.txt");
     mainWindow->setFixedSize(mainWindow->width(), mainWindow->height());
     mainWindow->show();
+
+    //this->close();
 }
 
 
@@ -62,7 +67,8 @@ void Menu::closeEvent(QCloseEvent *event) {
         event->accept();
 }
 
-void Menu::on_buttonRank_clicked(){
-    // unfinished
-    return ;
+void Menu::on_buttonRank_clicked() {
+    Ranklist = new ranklist(this);
+    Ranklist->setFixedSize(Ranklist->width(), Ranklist->height());
+    Ranklist->show();
 }

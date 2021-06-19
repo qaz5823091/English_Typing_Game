@@ -27,6 +27,9 @@ void RecordRank::sendGrade(int number, int seconds) {
 
 
 void RecordRank::on_check_accepted() {
+    player->setName(ui->nameEdit->text());
+    qDebug() << player->getName();
+
     this->close();
 }
 

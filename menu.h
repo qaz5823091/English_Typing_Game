@@ -5,7 +5,7 @@
 #include <QStackedWidget>
 #include <QCloseEvent>
 #include "mainwindow.h"
-
+#include "ranklist.h"
 namespace Ui {
 class Menu;
 }
@@ -35,6 +35,7 @@ private slots:
 private:
     Ui::Menu *ui;
     MainWindow *mainWindow;
+    ranklist *Ranklist;
 };
 
 #endif // MENU_H

@@ -5,8 +5,8 @@ Word::Word() {
 }
 
 Word::Word(QString w) {
-    setX(0);
-    setY(0);
+    //setX(0);
+    //setY(0);
     setSolved(false);
     setWord(w);
 }

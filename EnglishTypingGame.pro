@@ -16,7 +16,8 @@ SOURCES += \
     Word.cpp \
     main.cpp \
     mainwindow.cpp \
-    menu.cpp
+    menu.cpp \
+    ranklist.cpp
 
 HEADERS += \
     Article.h \
@@ -25,12 +26,14 @@ HEADERS += \
     RecordrRank.h \
     Word.h \
     mainwindow.h \
-    menu.h
+    menu.h \
+    ranklist.h
 
 FORMS += \
     RecordRank.ui \
     mainwindow.ui \
-    menu.ui
+    menu.ui \
+    ranklist.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -39,6 +42,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     Toeic.txt \
+    test4.txt \
     vocabulary.txt
 
 RESOURCES += \
