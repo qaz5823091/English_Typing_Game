@@ -62,8 +62,7 @@ void Menu::closeEvent(QCloseEvent *event) {
         event->accept();
 }
 
-void Menu::on_buttonRank_clicked()
-{
+void Menu::on_buttonRank_clicked(){
     // unfinished
     return ;
 }
