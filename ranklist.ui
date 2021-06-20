@@ -31,7 +31,7 @@
         <bool>false</bool>
        </property>
        <property name="placeholderText">
-        <string>輸入格式: 玩家名字 + 秒數(到小數點後4位)</string>
+        <string>輸入格式: 玩家名字 + 秒數(注意中間要空格)</string>
        </property>
       </widget>
      </item>

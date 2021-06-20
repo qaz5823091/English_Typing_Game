@@ -16,14 +16,14 @@ class ranklist : public QDialog
 public:
     explicit ranklist(QWidget *parent = nullptr);
     ~ranklist();
-    void sortForGrade(std::vector<QString>&, std::vector<QString>&);
+    void sortForGrade(std::vector<double>&, std::vector<QString>&);
 
 private slots:
     void on_pushButton_clicked();
 
 private:
     Ui::ranklist *ui;
-    std::vector <QString>time;
+    std::vector <double>time;
     std::vector <QString>name;
 };
 
